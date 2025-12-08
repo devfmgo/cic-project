@@ -1,0 +1,113 @@
+/* SF Pro Display Regular */
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../../assets/fonts/SF Pro Display Regular.OTF') format('opentype');
+}
+
+/* SF Pro Display Bold */
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../../assets/fonts/SF Pro Display Bold.OTF') format('opentype');
+}
+
+/* SF Pro Display Medium */
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../../assets/fonts/SF Pro Display Medium.OTF') format('opentype');
+}
+
+/* SF Pro Display Heavy Italic */
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 900;
+    font-style: italic;
+    src: url('../../assets/fonts/SF Pro Display Heavy Italic.OTF') format('opentype');
+}
+
+/* SF Pro Display Thin Italic */
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 100;
+    font-style: italic;
+    src: url('../../assets/fonts/SF Pro Display Thin Italic.OTF') format('opentype');
+}
+
+/* SF Pro Display Light Italic */
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 300;
+    font-style: italic;
+    src: url('../../assets/fonts/SF Pro Display Light Italic.OTF') format('opentype');
+}
+
+/* SF Pro Display Semibold Italic */
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 600;
+    font-style: italic;
+    src: url('../../assets/fonts/SF Pro Display Semibold Italic.OTF') format('opentype');
+}
+
+/* SF Pro Display Black Italic */
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 900;
+    font-style: italic;
+    src: url('../../assets/fonts/SF Pro Display Black Italic.OTF') format('opentype');
+}
+
+/* SF Pro Display Ultralight Italic */
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 200;
+    font-style: italic;
+    src: url('../../assets/fonts/SF Pro Display Ultralight Italic.OTF') format('opentype');
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+a {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+button {
+    /* font-family: 'SF Pro Display', sans-serif; */
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+input,
+textarea,
+select {
+    /* font-family: 'SF Pro Display', sans-serif; */
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+label {
+    /* font-family: 'SF Pro Display', sans-serif; */
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.navbar,
+.footer {
+    /* font-family: 'SF Pro Display', sans-serif; */
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Additional custom styles can be added below */
