@@ -24,6 +24,12 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
+        body {
+            /* padding-top: 80px; */
+            /* header + banner tinggi awal */
+            transition: padding-top .3s ease;
+        }
     </style>
 </head>
 
@@ -107,7 +113,7 @@
     function closeModal() {
         document.getElementById("myModal").classList.add("hidden");
     }
-
+    // Carusel Product
     document.addEventListener("DOMContentLoaded", function() {
         const scrollBox = document.getElementById("carouselScroll");
         const next = document.getElementById("btnNext");
@@ -185,6 +191,31 @@
                 }
             }, 4000);
         });
+    });
+    // Show hide info prototype
+    const banner = document.getElementById('topBanner');
+    const header = document.getElementById('mainHeader');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+            // Banner hilang
+            banner.style.display = "none";
+
+            // Header naik ke posisi top:0
+            header.style.top = "0";
+
+            // Sesuaikan padding body (tinggal header)
+            document.body.style.paddingTop = "60px";
+        } else {
+            // Banner muncul kembali
+            banner.style.display = "block";
+
+            // Header kembali turun sesuai tinggi banner
+            header.style.top = "40px";
+
+            // Body padding dikembalikan
+            document.body.style.paddingTop = "100px";
+        }
     });
 </script>
 

@@ -1,7 +1,11 @@
+<div id="topBanner" class="bg-orange-400 text-center z-[9999] text-gray-100 text-md fixed top-0 inset-x-0 p-2">
+    <label class="animate-pulse tracking-[1px] p-2">Website ini hanya prototype!</label>
+</div>
 <!-- Header -->
-<header
-    class="fixed w-full mx-auto  inset-x-0 top-0 z-50 border-b-1 border-gray-200 bg-white/90 backdrop-blur-sm shadow-sm p-3">
-    <nav class="container flex items-center justify-between mt-[-5px] mx-auto " aria-label="Global">
+<header id="mainHeader"
+    class="fixed w-full inset-x-0 top-[40px] z-[999] border-b border-gray-200 bg-white/90 backdrop-blur-sm shadow-sm p-3">
+
+    <nav class="container flex items-center justify-between mt-[-5px] mx-auto" aria-label="Global">
         <!-- Logo -->
         <div class="mb-2">
             <a href="/" class="hidden lg:block">
