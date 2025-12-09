@@ -65,7 +65,7 @@
 
                     @if ($product->productDetails && $product->productDetails[0]->url_website)
                         <a href="{{ $product->productDetails[0]->url_website }}" target="_blank"
-                            class="mt-10 inline-block bg-purple-600 text-purple-100 font-medium text-lg py-4 px-10 rounded shadow-lg hover:bg-purple-100 hover:text-purple-600 hover:scale-105 transition duration-300 transform">
+                            class="mt-10 inline-block bg-purple-600 text-purple-100 font-medium text-lg py-4 px-10 rounded shadow-lg hover:bg-purple-100 hover:text-purple-600 hover:scale-105 transition duration-300 transform rounded-2xl">
                             Selengkapnya
                         </a>
                     @endif
@@ -134,40 +134,64 @@
                                 <h4 class="text-md text-gray-700 font-medium">Deskripsi</h4>
                                 <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->description !!}</p>
                                 <hr class="text-gray-700 my-2 w-full" />
-                                <h4 class="text-md text-gray-700 font-medium">Indikasi Umum</h4>
-                                <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->indikasi !!}</p>
-                                <hr class="text-gray-700 my-2" />
                                 <h4 class="text-md text-gray-700 font-medium">Komposisi</h4>
                                 <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->komposisi !!}</p>
                                 <hr class="text-gray-700 my-2" />
-                                <h4 class="text-md text-gray-700 font-medium">Dosis</h4>
-                                <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->dosis !!}</p>
-                                <hr class="text-gray-700 my-2" />
-                                <h4 class="text-md text-gray-700 font-medium">Aturan Pakai</h4>
-                                <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->aturan_pakai !!}</p>
-                                <hr class="text-gray-700 my-2" />
-                                <h4 class="text-md text-gray-700 font-medium">Perhatian</h4>
-                                <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->perhatian !!}</p>
-                                <hr class="text-gray-700 my-2" />
-                                <h4 class="text-md text-gray-700 font-medium">Kontra Indikasi</h4>
-                                <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->kontra_indikasi !!}</p>
-                                <hr class="text-gray-700 my-2" />
-                                <h4 class="text-md text-gray-700 font-medium">Efek Samping</h4>
-                                <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->efek_samping !!}</p>
-                                <hr class="text-gray-700 my-2" />
-                                <h4 class="text-md text-gray-700 font-medium">Golongan Produk</h4>
-                                <p class="text-gray-600 mb-6 text-sm">{!! $product->obatCategory->obat_category_name !!}</p>
-                                <hr class="text-gray-700 my-2" />
-                                <h4 class="text-md text-gray-700 font-medium">Kemasan</h4>
-                                <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->kemasan !!}</p>
-                                <hr class="text-gray-700 my-2" />
-                                <h4 class="text-md text-gray-700 font-medium">Manufaktur</h4>
-                                <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->manufaktur !!}</p>
-                                <hr class="text-gray-700 my-2" />
-                                <h4 class="text-md text-gray-700 font-medium">No Registrasi</h4>
-                                <p class="text-gray-600 mb-6 text-sm">{{ $product->productDetails[0]->nomer_registrasi }}
-                                </p>
-                                <hr class="text-gray-700 my-2" />
+
+                                @unless (!empty($product->productDetails[0]->indikasi) || $product->productDetails[0]->indikasi === '-')
+                                    <h4 class="text-md text-gray-700 font-medium">Indikasi Umum</h4>
+                                    <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->indikasi !!}</p>
+                                    <hr class="text-gray-700 my-2" />
+                                @endunless
+
+
+
+                                @unless (!empty($product->productDetails[0]->dosis) || $product->productDetails[0]->dosis === '-')
+                                    <h4 class="text-md text-gray-700 font-medium">Dosis</h4>
+                                    <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->dosis !!}</p>
+                                    <hr class="text-gray-700 my-2" />
+                                @endunless
+                                @unless (!empty($product->productDetails[0]->aturan_pakai) || $product->productDetails[0]->aturan_pakai === '-')
+                                    <h4 class="text-md text-gray-700 font-medium">Aturan Pakai</h4>
+                                    <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->aturan_pakai !!}</p>
+                                    <hr class="text-gray-700 my-2" />
+                                @endunless
+                                @unless (!empty($product->productDetails[0]->perhatian) || $product->productDetails[0]->perhatian === '-')
+                                    <h4 class="text-md text-gray-700 font-medium">Perhatian</h4>
+                                    <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->perhatian !!}</p>
+                                    <hr class="text-gray-700 my-2" />
+                                @endunless
+                                @unless (!empty($product->productDetails[0]->kontra_indikasi) || $product->productDetails[0]->kontra_indikasi === '-')
+                                    <h4 class="text-md text-gray-700 font-medium">Kontra Indikasi</h4>
+                                    <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->kontra_indikasi !!}</p>
+                                    <hr class="text-gray-700 my-2" />
+                                @endunless
+                                @unless (!empty($product->productDetails[0]->efek_samping) || $product->productDetails[0]->efek_samping === '-')
+                                    <h4 class="text-md text-gray-700 font-medium">Efek Samping</h4>
+                                    <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->efek_samping !!}</p>
+                                    <hr class="text-gray-700 my-2" />
+                                @endunless
+                                @unless (!empty($product->obatCategory->obat_category_name) || $product->obatCategory->obat_category_name === '-')
+                                    <h4 class="text-md text-gray-700 font-medium">Golongan Produk</h4>
+                                    <p class="text-gray-600 mb-6 text-sm">{!! $product->obatCategory->obat_category_name !!}</p>
+                                    <hr class="text-gray-700 my-2" />
+                                @endunless
+                                @unless (!empty($product->productDetails[0]->kemasan) || $product->productDetails[0]->kemasan === '-')
+                                    <h4 class="text-md text-gray-700 font-medium">Kemasan</h4>
+                                    <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->kemasan !!}</p>
+                                    <hr class="text-gray-700 my-2" />
+                                @endunless
+                                @unless (!empty($product->productDetails[0]->manufaktur) || $product->productDetails[0]->manufaktur === '-')
+                                    <h4 class="text-md text-gray-700 font-medium">Manufaktur</h4>
+                                    <p class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->manufaktur !!}</p>
+                                    <hr class="text-gray-700 my-2" />
+                                @endunless
+                                @unless (!empty($product->productDetails[0]->nomer_registrasi) || $product->productDetails[0]->nomer_registrasi === '-')
+                                    <h4 class="text-md text-gray-700 font-medium">No Registrasi</h4>
+                                    <p class="text-gray-600 mb-6 text-sm">{{ $product->productDetails[0]->nomer_registrasi }}
+                                    </p>
+                                    <hr class="text-gray-700 my-2" />
+                                @endunless
                             </div>
 
                         </div>
