@@ -72,9 +72,9 @@ class HomeController extends Controller
             ->where('product_name', 'LIKE', "%$q%")
             // ->orderByDesc('clicks_count') // urutkan dari yang paling banyak diklik
             ->get();
-        if ($products->isEmpty()) {
-            return redirect()->route('pages.notfound');
-        }
+        // if ($products->isEmpty()) {
+        //     return redirect()->route('pages.notfound');
+        // }
         // dd($products);
         return view('pages.product', compact('products', 'q'));
     }

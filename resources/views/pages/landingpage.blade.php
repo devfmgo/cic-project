@@ -249,5 +249,14 @@
                 </svg>
             </button>
         </div>
+        <div class=" flex justify-center items-center mt-5">
+            <a href="/product"
+                class=" bg-purple-600 text-white px-4 py-3 rounded-full shadow-lg cursor-pointer flex justify-center items-center gap-2 hover:bg-purple-700 w-52">View
+                all <svg data-slot="icon" class="w-5 wl-6" fill="none" stroke-width="1.5" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3">
+                    </path>
+                </svg></a>
+        </div>
     </section>
 @endsection

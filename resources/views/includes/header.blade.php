@@ -1,5 +1,5 @@
 <div id="topBanner" class="bg-orange-400 text-center z-[9999] text-gray-100 text-md fixed top-0 inset-x-0 p-2">
-    <label class="animate-pulse tracking-[1px] p-2">Website ini hanya prototype!</label>
+    <label class="tracking-[1px] p-2">Website ini hanya prototype!</label>
 </div>
 <!-- Header -->
 <header id="mainHeader"

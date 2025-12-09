@@ -4,39 +4,41 @@
     <!-- Product All -->
     <section class=" container mx-auto py-20 px-4">
         {{-- ===== BREADCRUMB ===== --}}
-        <div class="container mx-auto  mb-6">
-            <ol
-                class="inline-flex items-center space-x-1 md:space-x-3 bg-indigo-50/50 rounded-lg p-4 text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-400">
-                <li class="inline-flex items-center">
-                    <a href="/"
-                        class="text-sm text-gray-700 hover:text-indigo-400 hover:font-semibold inline-flex items-center dark:text-gray-400 dark:hover:text-white">
-                        <svg data-slot="icon" class="w-5 h-5 mr-2 text-indigo-400 font-black" fill="none" stroke-width="1.5"
-                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25">
-                            </path>
-                        </svg>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <div class="flex items-center">
-                        <svg class="w-6 h-6 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <a href="/product"
-                            class="text-gray-700  ml-1 md:ml-2 text-sm font-semibold  hover:text-indigo-400 hover:font-semibold">Product</a>
-                    </div>
-                </li>
+        @if (empty($q))
+            <div class="container mx-auto mb-6 mt-6">
+                <ol
+                    class="inline-flex items-center space-x-1 md:space-x-3 bg-indigo-50/50 rounded-lg p-4 text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-400">
+                    <li class="inline-flex items-center">
+                        <a href="/"
+                            class="text-sm text-gray-700 hover:text-indigo-400 hover:font-semibold inline-flex items-center dark:text-gray-400 dark:hover:text-white">
+                            <svg data-slot="icon" class="w-5 h-5 mr-2 text-indigo-400 font-black" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25">
+                                </path>
+                            </svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <a href="/product"
+                                class="text-gray-700  ml-1 md:ml-2 text-sm font-semibold  hover:text-indigo-400 hover:font-semibold">Product</a>
+                        </div>
+                    </li>
 
-            </ol>
-        </div>
+                </ol>
+            </div>
+        @endif
         @if (!empty($q))
-            <h2 class="text-muted font-medium mb-4">
-
+            <h2 class="text-muted font-medium my-6">
                 Menampilkan {{ count($products) }} hasil pencarian untuk " <span
                     class="text-purple-600 font-bold">{{ $q }}
                     "</span>
@@ -44,12 +46,14 @@
             </h2>
         @endif
         @if (!empty(count($products)))
-            <div class="py-4">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
-                    Our <span class="text-purple-600">Product</span>
-                </h2>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            @if (empty($q))
+                <div class="py-4">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
+                        Our <span class="text-purple-600">Product</span>
+                    </h2>
+                </div>
+            @endif
+            <div class=" my-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                 <!-- Produk cards: ganti w-full dengan w-full di semua card -->
                 @foreach ($products as $item)
                     <!-- Ulsafate -->
@@ -125,6 +129,9 @@
 
             </div>
         @else
+            <div class="my-24">
+                <h1 class="text-center text-2xl text-gray-600 my-6 mt-8">Product yang di cari tidak ditemukan</h1>
+            </div>
         @endif
 
     </section>

@@ -205,16 +205,15 @@
             header.style.top = "0";
 
             // Sesuaikan padding body (tinggal header)
-            document.body.style.paddingTop = "60px";
+            // document.body.style.paddingTop = "40px";
         } else {
             // Banner muncul kembali
             banner.style.display = "block";
 
             // Header kembali turun sesuai tinggi banner
             header.style.top = "40px";
-
             // Body padding dikembalikan
-            document.body.style.paddingTop = "100px";
+            // document.body.style.paddingTop = "100px";
         }
     });
 </script>
