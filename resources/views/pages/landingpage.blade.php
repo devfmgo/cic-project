@@ -25,23 +25,24 @@
         <!-- Carousel wrapper -->
         <div class="relative h-56 overflow-hidden rounded-lg md:h-[44rem]">
             <!-- Item 1 -->
-            <div class="hidden duration-3000 ease-in-out" data-carousel-item>
-                <img src="https://maltofer.combiphar.com/frontend/themes/maltofer2/assets/img/home/hero.png"
+            <div class="hidden duration-5000 ease-in-out" data-carousel-item>
+                <img src="{{ asset('assets/images/slider/Slider_Obh.png') }}"
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
                     alt="...">
             </div>
+
             <!-- Item 2 -->
-            {{-- <div class="hidden duration-3000 ease-in-out" data-carousel-item>
-                <img src="https://fortiboost.co.id/storage/photos/1/Wallpaper%20Fortiboost%20Mobile%20&%20Desktop-02.jpg"
+            <div class="hidden duration-5000 ease-in-out" data-carousel-item>
+                <img src="{{ asset('assets/images/slider/Slider_Fortiboost.png') }}"
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
                     alt="...">
-            </div> --}}
+            </div>
             <!-- Item 3 -->
-            {{-- <div class="hidden duration-3000 ease-in-out" data-carousel-item>
-                <img src="https://fortiboost.co.id/storage/photos/1/banner/banner-desktopnew3-1.png"
+            <div class="hidden duration-5000 ease-in-out" data-carousel-item>
+                <img src="{{ asset('assets/images/slider/Slider_Maltofer.png') }}"
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
                     alt="...">
-            </div> --}}
+            </div>
         </div>
         <div
             class=" absolute z-30 flex -translate-x-1/2 bottom-20 left-1/2 space-x-3 rtl:space-x-reverse bg-purple-500/30 px-3 py-2 rounded-full">

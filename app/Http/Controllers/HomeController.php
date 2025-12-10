@@ -24,7 +24,7 @@ class HomeController extends Controller
             'productClick'
         ])
             ->withCount('clicks') // hitung jumlah klik per produk
-            // ->orderByDesc('clicks_count') // urutkan dari yang paling banyak diklik
+            ->orderByDesc('id') // urutkan dari yang paling banyak diklik
             ->get();
         // dd($products);
 
@@ -57,7 +57,7 @@ class HomeController extends Controller
             'productClick'
         ])
             ->withCount('clicks') // hitung jumlah klik per produk
-            // ->orderByDesc('clicks_count') // urutkan dari yang paling banyak diklik
+            ->orderByDesc('id') // urutkan dari yang paling banyak diklik
             ->get();
         return view('pages.product', compact('products'));
     }

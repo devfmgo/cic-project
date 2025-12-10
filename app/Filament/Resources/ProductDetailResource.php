@@ -110,8 +110,8 @@ class ProductDetailResource extends Resource
                 //     ->label('Kemasan'),
                 Tables\Columns\TextColumn::make('nomer_registrasi')
                     ->label('Nomer Registrasi'),
-                Tables\Columns\TextColumn::make('url_website')
-                    ->label('URL Website'),
+                // Tables\Columns\TextColumn::make('url_website')
+                //     ->label('URL Website'),
                 Tables\Columns\TextColumn::make('manufaktur')
                     ->label('Manufaktur'),
 

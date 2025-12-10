@@ -7,10 +7,10 @@
         @if (empty($q))
             <div class="container mx-auto mb-6 mt-6">
                 <ol
-                    class="inline-flex items-center space-x-1 md:space-x-3 bg-indigo-50/50 rounded-lg p-4 text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-400">
+                    class="inline-flex items-center space-x-1 md:space-x-3 bg-indigo-50/50 rounded-lg p-4 text-sm text-gray-700 ">
                     <li class="inline-flex items-center">
                         <a href="/"
-                            class="text-sm text-gray-700 hover:text-indigo-400 hover:font-semibold inline-flex items-center dark:text-gray-400 dark:hover:text-white">
+                            class="text-sm text-gray-700 hover:text-indigo-400 hover:font-semibold inline-flex items-center ">
                             <svg data-slot="icon" class="w-5 h-5 mr-2 text-indigo-400 font-black" fill="none"
                                 stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
