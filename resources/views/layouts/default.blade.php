@@ -13,7 +13,7 @@
     @else
     @endif
     <link rel="stylesheet" href="..\css\filament\custom.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     @include('includes.head')
     <style>
         .scrollbar-hide::-webkit-scrollbar {
@@ -125,38 +125,44 @@
         // -------------------------------
         // NEXT
         // -------------------------------
-        next.addEventListener("click", () => {
-            if (scrollBox.scrollLeft >= scrollEnd() - 5) {
-                // Mentok kanan → balik ke awal
-                scrollBox.scrollTo({
-                    left: 0,
-                    behavior: "smooth"
-                });
-            } else {
-                scrollBox.scrollBy({
-                    left: itemWidth,
-                    behavior: "smooth"
-                });
-            }
-        });
+        if (next) {
+            next.addEventListener("click", () => {
+                if (scrollBox.scrollLeft >= scrollEnd() - 5) {
+                    // Mentok kanan → balik ke awal
+                    scrollBox.scrollTo({
+                        left: 0,
+                        behavior: "smooth"
+                    });
+                } else {
+                    scrollBox.scrollBy({
+                        left: itemWidth,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        }
+
 
         // -------------------------------
         // PREV
         // -------------------------------
-        prev.addEventListener("click", () => {
-            if (scrollBox.scrollLeft <= 5) {
-                // Mentok kiri → loncat ke paling akhir
-                scrollBox.scrollTo({
-                    left: scrollEnd(),
-                    behavior: "smooth"
-                });
-            } else {
-                scrollBox.scrollBy({
-                    left: -itemWidth,
-                    behavior: "smooth"
-                });
-            }
-        });
+        if (prev) {
+            prev.addEventListener("click", () => {
+                if (scrollBox.scrollLeft <= 5) {
+                    // Mentok kiri → loncat ke paling akhir
+                    scrollBox.scrollTo({
+                        left: scrollEnd(),
+                        behavior: "smooth"
+                    });
+                } else {
+                    scrollBox.scrollBy({
+                        left: -itemWidth,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        }
+
 
         // -------------------------------
         // AUTO SLIDE (opsional)
@@ -174,23 +180,28 @@
                 });
             }
         }, 4000);
+        if (scrollBox) {
+            scrollBox.addEventListener("mouseenter", () => clearInterval(auto));
+            scrollBox.addEventListener("mouseleave", () => {
+                auto = setInterval(() => {
 
-        scrollBox.addEventListener("mouseenter", () => clearInterval(auto));
-        scrollBox.addEventListener("mouseleave", () => {
-            auto = setInterval(() => {
-                if (scrollBox.scrollLeft >= scrollEnd() - 5) {
-                    scrollBox.scrollTo({
-                        left: 0,
-                        behavior: "smooth"
-                    });
-                } else {
-                    scrollBox.scrollBy({
-                        left: itemWidth,
-                        behavior: "smooth"
-                    });
-                }
-            }, 4000);
-        });
+                    if (scrollBox.scrollLeft >= scrollEnd() - 5) {
+                        scrollBox.scrollTo({
+                            left: 0,
+                            behavior: "smooth"
+                        });
+                    } else {
+                        scrollBox.scrollBy({
+                            left: itemWidth,
+                            behavior: "smooth"
+                        });
+                    }
+
+
+                }, 4000);
+            });
+        }
+
     });
     // Show hide info prototype
     const banner = document.getElementById('topBanner');

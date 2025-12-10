@@ -34,6 +34,7 @@ class HomeController extends Controller
     public function singleProduct($slug)
     {
         $product = Product::where('slug', $slug)->with('productDetails', 'obatCategory', 'productCategory')->firstOrFail();
+        
         // dd($product);
         $productserupa = Product::where('product_category_id', $product->product_category_id)
             ->with('productDetails', 'obatCategory')

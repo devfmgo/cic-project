@@ -23,23 +23,26 @@
 
     <div id="controls-carousel" class="mt-4 relative container mx-auto pb-10 lg:mt-24" data-carousel="slide">
         <!-- Carousel wrapper -->
+
+        <!-- Item 1 -->
         <div class="relative h-56 overflow-hidden rounded-lg md:h-[44rem]">
-            <!-- Item 1 -->
-            <div class="hidden duration-5000 ease-in-out" data-carousel-item>
+            <div class="hidden duration-3000 ease-in-out" data-carousel-item>
+                <img src="{{ asset('assets/images/slider/Slider_Maltofer.png') }}"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
+                    alt="...">
+            </div>
+
+
+            <!-- Item 2 -->
+            <div class="hidden duration-3000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/slider/Slider_Obh.png') }}"
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
                     alt="...">
             </div>
 
-            <!-- Item 2 -->
-            <div class="hidden duration-5000 ease-in-out" data-carousel-item>
-                <img src="{{ asset('assets/images/slider/Slider_Fortiboost.png') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
-                    alt="...">
-            </div>
             <!-- Item 3 -->
-            <div class="hidden duration-5000 ease-in-out" data-carousel-item>
-                <img src="{{ asset('assets/images/slider/Slider_Maltofer.png') }}"
+            <div class="hidden duration-3000 ease-in-out" data-carousel-item>
+                <img src="{{ asset('assets/images/slider/Slider_Fortiboost.png') }}"
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
                     alt="...">
             </div>
@@ -214,7 +217,7 @@
                                         </sub>
 
                                         <h3
-                                            class="text-sm py-2 font-medium text-gray-700 hover:text-purple-600 tracking-[1px]">
+                                            class="text-sm py-2 font-medium text-gray-700 hover:text-purple-600 tracking-[1px] truncate">
                                             <a href="{{ route('single-product', $item->slug) }}">
                                                 {{ $item->product_name }}
                                             </a>

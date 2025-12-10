@@ -53,7 +53,8 @@
                     </h2>
                 </div>
             @endif
-            <div class=" my-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <div
+                class=" my-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 min-w-[250px]">
                 <!-- Produk cards: ganti w-full dengan w-full di semua card -->
                 @foreach ($products as $item)
                     <!-- Ulsafate -->
@@ -83,8 +84,8 @@
                                         <sub
                                             class="text-[10px] text-indigo-600  tracking-[1px] font-medium bg-indigo-50 p-1 rounded-xl my-3">{{ $item->productCategory->product_category_name }}</sub>
                                         <h3
-                                            class="text-sm py-2 font-medium text-gray-700 hover:text-purple-600 cursor-pointer font-size-14px line-height-12px tracking-[1px] text-wrap">
-                                            <a href="{{ route('single-product', $item->slug) }}">
+                                            class="text-sm py-2 font-medium text-gray-700 hover:text-purple-600 tracking-[1px] text-ellipsis  max-w-[250px] truncate ">
+                                            <a href="{{ route('single-product', $item->slug) }}" class="">
                                                 {{ $item->product_name }}</a>
 
                                         </h3>

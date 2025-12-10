@@ -125,7 +125,7 @@
  <!-- Modal Form Feedback -->
  <div id="myModal"
      class="fixed inset-0 bg-black/50 flex items-start justify-center
-            pt-16 sm:pt-20 md:pt-28 lg:pt-36 xl:pt-40 hidden z-50 p-2 ">
+            pt-16 sm:pt-20 md:pt-28 lg:pt-36 xl:pt-6 hidden z-50 p-2 ">
 
      <!-- Card Modal -->
      <div class="bg-white w-full max-w-md rounded-xl p-6 shadow-lg animate-fade-in">
