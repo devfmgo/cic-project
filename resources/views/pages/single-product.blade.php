@@ -50,13 +50,15 @@
         <header class="bg-gradient-to-bl from-pink-300 via-purple-300 to-indigo-400 py-20 mx-auto  mt-8 my-10">
             <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between">
                 <div class="w-full text-center lg:text-left mb-10 lg:mb-0">
+
                     <!-- Badge -->
-                    <sub class="text-[12px] text-gray-100 tracking-[1px] font-semibold my-4">
+                    <sub class="text-[12px] text-gray-100 tracking-[1px] font-semibold">
                         {{ $product->productCategory->product_category_name }}
                     </sub>
-                    <h1 class="text-5xl md:text-6xl font-medium text-gray-700 leading-tight mt-4 ">
+                    <h1 class="text-5xl md:text-6xl font-medium text-gray-700 leading-tight ">
                         {{ $product->product_name }}
                     </h1>
+
                     {{-- <div class='mt-6 text-md mx-auto lg:mx-0 w-10/12 text-gray-100'>
                         {!! $product->productDetails[0]->description !!}
                     </div> --}}
@@ -135,18 +137,18 @@
                             {{-- detail produk --}}
                             <div>
                                 <h4 class="text-md text-gray-700 font-semibold">Deskripsi</h4>
-                                <div class="text-gray-600 mb-6 text-sm lg:mt-[-14px] ">
+                                <div class="text-gray-600 mb-6 text-sm">
                                     {!! $product->productDetails[0]->description !!}
                                 </div>
                                 <hr class="text-gray-300 my-4 w-full" />
                                 @if (($detail && !empty($product->productDetails[0]->komposisi)) || $product->productDetails[0]->komposisi === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">Komposisi</h4>
-                                    <p class="text-gray-600 mb-6 text-sm lg:mt-[-14px]">{!! $product->productDetails[0]->komposisi !!}</p>
+                                    <div class="text-gray-600 mb-6 text-sm ">{!! $product->productDetails[0]->komposisi !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
                                 @if (($detail && !empty($product->productDetails[0]->indikasi)) || $product->productDetails[0]->indikasi === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">Indikasi Umum</h4>
-                                    <p class="text-gray-600 mb-6 text-sm lg:mt-[-14px]">{!! $product->productDetails[0]->indikasi !!}</p>
+                                    <div class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->indikasi !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
 
@@ -154,55 +156,55 @@
 
                                 @if (($detail && !empty($product->productDetails[0]->dosis)) || $product->productDetails[0]->dosis === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">Dosis</h4>
-                                    <p class="text-gray-600 mb-6 text-sm lg:mt-[-14px]">{!! $product->productDetails[0]->dosis !!}</p>
+                                    <div class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->dosis !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
                                 @if (($detail && !empty($product->productDetails[0]->aturan_pakai)) || $product->productDetails[0]->aturan_pakai === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">Aturan Pakai</h4>
-                                    <p class="text-gray-600 mb-6 text-sm lg:mt-[-14px]">{!! $product->productDetails[0]->aturan_pakai !!}</p>
+                                    <div class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->aturan_pakai !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
                                 @if (($detail && !empty($product->productDetails[0]->perhatian)) || $product->productDetails[0]->perhatian === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">Perhatian</h4>
-                                    <p class="text-gray-600 mb-6 text-sm lg:mt-[-14px]">{!! $product->productDetails[0]->perhatian !!}</p>
+                                    <div class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->perhatian !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
                                 @if (
                                     ($detail && !empty($product->productDetails[0]->kontra_indikasi)) ||
                                         $product->productDetails[0]->kontra_indikasi === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">Kontra Indikasi</h4>
-                                    <p class="text-gray-600 mb-6 text-sm lg:mt-[-14px]">{!! $product->productDetails[0]->kontra_indikasi !!}</p>
+                                    <div class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->kontra_indikasi !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
                                 @if (($detail && !empty($product->productDetails[0]->efek_samping)) || $product->productDetails[0]->efek_samping === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">Efek Samping</h4>
-                                    <p class="text-gray-600 mb-6 text-sm lg:mt-[-14px]">{!! $product->productDetails[0]->efek_samping !!}</p>
+                                    <div class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->efek_samping !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
                                 @if (
                                     ($detail && !empty($product->obatCategory->obat_category_name)) ||
                                         $product->obatCategory->obat_category_name === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">Golongan Produk</h4>
-                                    <p class="text-gray-600 mb-6 text-sm mt-3 ">{!! $product->obatCategory->obat_category_name !!}</p>
+                                    <div class="text-gray-600 mb-6 text-sm mt-3 ">{!! $product->obatCategory->obat_category_name !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
                                 @if (($detail && !empty($product->productDetails[0]->kemasan)) || $product->productDetails[0]->kemasan === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">Kemasan</h4>
-                                    <p class="text-gray-600 mb-6 text-sm ">{!! $product->productDetails[0]->kemasan !!}</p>
+                                    <div class="text-gray-600 mb-6 text-sm ">{!! $product->productDetails[0]->kemasan !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
                                 @if (($detail && !empty($product->productDetails[0]->manufaktur)) || $product->productDetails[0]->manufaktur === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">Manufaktur</h4>
-                                    <p class="text-gray-600 mb-6 text-sm ">{!! $product->productDetails[0]->manufaktur !!}</p>
+                                    <div class="text-gray-600 mb-6 text-sm ">{!! $product->productDetails[0]->manufaktur !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
                                 @if (
                                     ($detail && !empty($product->productDetails[0]->nomer_registrasi)) ||
                                         $product->productDetails[0]->nomer_registrasi === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">No Registrasi</h4>
-                                    <p class="text-gray-600 mb-6 text-sm ">
+                                    <div class="text-gray-600 mb-6 text-sm ">
                                         {{ $product->productDetails[0]->nomer_registrasi }}
-                                    </p>
+                                    </div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
                             </div>
@@ -216,11 +218,12 @@
                         {{-- Rekomendasi produk lain  --}}
                         <div class=" lg:top-20 p-2 my-10 lg:my-0 w-full lg:w-1/3">
                             {{-- detail produk --}}
-                            <h4 class="text-md text-gray-700 font-medium">Produk Sejenis</h4>
+                            <h4 class="text-md text-gray-700 font-semibold">Produk Sejenis</h4>
 
                             <div class="flex flex-col gap-4 mt-4">
                                 @foreach ($productserupa as $item)
-                                    <div class="flex flex-row w-full justify-start transition border rounded-lg p-1">
+                                    <div
+                                        class="flex flex-row w-full justify-start transition border-gray-100 rounded-lg p-1">
                                         <div class="relative transition-shadow duration-300">
                                             <a href="{{ route('single-product', $item->slug) }}">
                                                 @if ($item->productDetails && $item->productDetails[0]->image)

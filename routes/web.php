@@ -23,3 +23,10 @@ Route::get('/product-not-found', function () {
 })->name('pages.notfound');
 
 Route::post('/feedback/store', [FeedbackController::class, 'store'])->name('create.feedback');
+
+Route::get('/clear', function () {
+
+    Artisan::call('cache:clear');
+
+    dd("Cache Clear All");
+});
