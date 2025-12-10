@@ -182,6 +182,7 @@
                                     <div class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->efek_samping !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
+
                                 @if (
                                     ($detail && !empty($product->obatCategory->obat_category_name)) ||
                                         $product->obatCategory->obat_category_name === '-')
