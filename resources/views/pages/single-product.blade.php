@@ -176,6 +176,7 @@
                                     <div class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->kontra_indikasi !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
+
                                 @if (($detail && !empty($product->productDetails[0]->efek_samping)) || $product->productDetails[0]->efek_samping === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">Efek Samping</h4>
                                     <div class="text-gray-600 mb-6 text-sm">{!! $product->productDetails[0]->efek_samping !!}</div>
