@@ -25,7 +25,7 @@
         <!-- Carousel wrapper -->
 
         <!-- Item 1 -->
-        <div class="relative md:h-[43.5rem] overflow-hidden rounded-lg sm:h-56">
+        <div class="relative md:h-[43.5rem] overflow-hidden rounded-lg h-56 mt-6">
             <div class="hidden duration-3000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/slider/Slider_Maltofer.png') }}"
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
