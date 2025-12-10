@@ -185,7 +185,7 @@
                                     ($detail && !empty($product->obatCategory->obat_category_name)) ||
                                         $product->obatCategory->obat_category_name === '-')
                                     <h4 class="text-md text-gray-700 font-semibold">Golongan Produk</h4>
-                                    <div class="text-gray-600 mb-6 text-sm mt-3 ">{!! $product->obatCategory->obat_category_name !!}</div>
+                                    <div class="text-gray-600 mb-6 text-sm">{!! $product->obatCategory->obat_category_name !!}</div>
                                     <hr class="text-gray-300 my-4" />
                                 @endif
                                 @if (($detail && !empty($product->productDetails[0]->kemasan)) || $product->productDetails[0]->kemasan === '-')
