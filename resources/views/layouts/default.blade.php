@@ -30,6 +30,13 @@
             /* header + banner tinggi awal */
             transition: padding-top .3s ease;
         }
+
+        .bg-single-product {
+
+
+            background-color: rgb(243, 232, 255);
+            background-image: radial-gradient(at 0% 100%, rgb(216, 180, 254) 0, transparent 78%), radial-gradient(at 100% 13%, rgb(147, 51, 234) 0, transparent 48%), radial-gradient(at 0% 42%, rgb(252, 211, 77) 0, transparent 29%);
+        }
     </style>
 </head>
 

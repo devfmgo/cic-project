@@ -21,70 +21,69 @@
     </section> --}}
 
 
-    <div id="controls-carousel" class="mt-4 relative container mx-auto pb-10 lg:mt-24" data-carousel="slide">
-        <!-- Carousel wrapper -->
+    <div id="controls-carousel" class="relative w-full container mx-auto mt-4 lg:mt-24 pb-10" data-carousel="slide">
 
-        <!-- Item 1 -->
-        <div class="relative md:h-[43.5rem] overflow-hidden rounded-lg h-56 mt-6">
-            <div class="hidden duration-3000 ease-in-out" data-carousel-item>
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 md:h-[43.5rem] overflow-hidden rounded-lg">
+
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                 <img src="{{ asset('assets/images/slider/Slider_Maltofer.png') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
-                    alt="...">
+                    class="absolute block w-full h-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    alt="Slider 1">
             </div>
 
-
             <!-- Item 2 -->
-            <div class="hidden duration-3000 ease-in-out" data-carousel-item>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/slider/Slider_Obh.png') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
-                    alt="...">
+                    class="absolute block w-full h-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    alt="Slider 2">
             </div>
 
             <!-- Item 3 -->
-            <div class="hidden duration-3000 ease-in-out" data-carousel-item>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/slider/Slider_Fortiboost.png') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
-                    alt="...">
+                    class="absolute block w-full h-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    alt="Slider 3">
             </div>
         </div>
-        <div
-            class=" absolute z-30 flex -translate-x-1/2 bottom-20 left-1/2 space-x-3 rtl:space-x-reverse bg-purple-500/30 px-3 py-2 rounded-full">
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
-                data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
-                data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
-                data-carousel-slide-to="2"></button>
 
+        <!-- Indicators -->
+        <div
+            class="absolute z-30 flex -translate-x-1/2 bottom-6 left-1/2 space-x-3 bg-purple-500/30 px-3 py-2 rounded-full">
+            <button type="button" class="w-3 h-3 rounded-full" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-label="Slide 3" data-carousel-slide-to="2"></button>
         </div>
-        <!-- Slider controls -->
+
+        <!-- Prev button -->
         <button type="button"
-            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group"
             data-carousel-prev>
             <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                class="inline-flex items-center justify-center w-10 h-10 bg-white/30 rounded-full group-hover:bg-white/50">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M5 1 1 5l4 4" />
                 </svg>
-                <span class="sr-only">Previous</span>
             </span>
         </button>
+
+        <!-- Next button -->
         <button type="button"
-            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group"
             data-carousel-next>
             <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                class="inline-flex items-center justify-center w-10 h-10 bg-white/30 rounded-full group-hover:bg-white/50">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="m1 9 4-4-4-4" />
                 </svg>
-                <span class="sr-only">Next</span>
             </span>
         </button>
+
     </div>
+
 
 
 
@@ -201,12 +200,23 @@
                                     </svg>
                                     <label class="text-[10px]">{{ $item->clicks_count }}</label>
                                 </div>
+                                <!-- Gambar Produk -->
+                                @if (!empty($item->productDetails[0]->image))
+                                    <img src="storage/{{ $item->productDetails[0]->image }}" alt="{{ $item->product_name }}"
+                                        class="mt-10 w-full h-44 object-contain mx-auto transition-transform duration-300 hover:scale-110">
+                                @else
+                                    <svg data-slot="icon" class="text-gray-100" fill="none" stroke-width="1.5"
+                                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z">
+                                        </path>
+                                    </svg>
+                                @endif
 
-                                <img src="storage/{{ $item->productDetails[0]->image }}" alt="{{ $item->product_name }}"
-                                    class="mt-10 w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110">
                             </div>
 
-                            <div class="h-32 px-4 pt-4"
+                            <div class="h-32 px-4 pt-5"
                                 style="overflow:hidden;position:relative;top:-20px;border-radius:25px;background:white;padding:10px;">
 
                                 <div class="flex flex-col h-full justify-between">
