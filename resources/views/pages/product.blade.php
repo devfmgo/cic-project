@@ -58,10 +58,12 @@
                 <!-- Produk cards: ganti w-full dengan w-full di semua card -->
                 @foreach ($products as $item)
                     <!-- Ulsafate -->
-                    <div class="w-full  overflow-hidden  transition">
-                        <div class="relative bg-purple-100 p-5 rounded-t-[16px] shadow-lg">
+                    <div
+                        class="w-full  overflow-hidden  transition-shadow shadow-sm hover:shadow-lg hover:shadow-purple-100 rounded-xl bg-white">
+                        <div
+                            class="relative bg-gradient-to-t from-violet-300 to-violet-400 p-5 rounded-t-[16px] shadow-lg ">
                             <div
-                                class=" bg-yellow-50 text-yellow-600 rounded-xl flex gap-1  absolute top-4 left-4  px-3 py-1 text-xs font-semibold ">
+                                class=" bg-yellow-50 text-yellow-600 rounded-xl items-center flex gap-1  absolute top-4 left-4  px-3 py-1 text-xs font-semibold tracking-tight ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-4">
                                     <path stroke-linecap="round" stroke-linejoin="round"

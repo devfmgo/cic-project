@@ -183,10 +183,11 @@
                 @foreach ($products as $item)
                     <!-- Item -->
                     <div
-                        class="carousel-item snap-start w-1/4 min-w-[250px] bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
+                        class="carousel-item snap-start w-1/4 min-w-[250px] bg-white rounded-xl shadow hover:shadow-xl hover:shadow-purple-100 transition overflow-hidden">
 
                         <div class="w-full overflow-hidden transition">
-                            <div class="relative bg-purple-100 p-5 rounded-t-[16px] shadow-lg">
+                            <div
+                                class="relative bg-gradient-to-t from-violet-300 to-violet-400 p-5 rounded-t-[16px] shadow-lg">
 
                                 <!-- Badge -->
                                 <div

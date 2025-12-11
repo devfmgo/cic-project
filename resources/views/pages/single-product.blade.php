@@ -6,7 +6,8 @@
     <section class="relative w-full bg-white pt-24 overflow-hidden pb-10">
         {{-- ===== BREADCRUMB ===== --}}
         <div class="container mx-auto  mb-6">
-            <ol class="inline-flex items-center space-x-1 md:space-x-3 bg-indigo-50/50 rounded-lg p-4 text-sm text-gray-700">
+            <ol
+                class="inline-flex items-center space-x-1 md:space-x-3 bg-indigo-50/50 rounded-lg p-4 text-sm text-gray-700 shadow-sm">
                 <li class="inline-flex items-center">
                     <a href="/"
                         class="text-sm text-gray-700 hover:text-indigo-400 hover:font-semibold inline-flex items-center ">
@@ -47,7 +48,7 @@
         </div>
         {{-- ===== HEADER SECTION ===== --}}
 
-        <header class="bg-gradient-to-bl from-pink-300 via-purple-300 to-indigo-400 py-20 mx-auto  mt-8 my-10">
+        <header class="bg-gradient-to-t from-violet-300 to-violet-400 py-20 mx-auto  mt-8 my-10">
             <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between">
                 <div class="w-full text-center lg:text-left mb-10 lg:mb-0">
 
