@@ -125,7 +125,7 @@
  <!-- Modal Form Feedback -->
  <div id="myModal"
      class="fixed inset-0 bg-black/50 flex items-start justify-center
-            pt-16 sm:pt-20 md:pt-28 lg:pt-36 xl:pt-6 hidden z-50 p-2 ">
+            pt-20 sm:pt-20 md:pt-28 lg:pt-[12rem] xl:pt-[12rem] hidden z-50 p-2 ">
 
      <!-- Card Modal -->
      <div class="bg-white w-full max-w-md rounded-xl p-6 shadow-lg animate-fade-in">
@@ -216,7 +216,7 @@
          </div> --}}
      </div>
  </div>
- <div class="fixed bottom-6 right-6">
+ <div class="fixed bottom-6 right-6 z-[999]">
      <a href="javascript:void(0);" onclick="openModal()"
          class="inline-flex items-center gap-2 text-sm lg:text-md font-mendium text-white hover:text-purple-100 bg-purple-500 p-4 rounded-full hover:bg-purple-600">
          <svg data-slot="icon" class="w-5 lg:w-6" fill="none" stroke-width="1.5" stroke="currentColor"
