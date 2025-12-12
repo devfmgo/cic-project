@@ -3,7 +3,9 @@
 use App\Http\Controllers\FeedbackController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
-
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use Endroid\QrCode\Builder\Builder;
+use App\Models\Product;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/product/{slug}', [App\Http\Controllers\HomeController::class, 'singleProduct'])->name('single-product');
 Route::get('/product', [App\Http\Controllers\HomeController::class, 'product'])->name('product');
@@ -30,3 +32,14 @@ Route::get('/clear', function () {
 
     dd("Cache Clear All");
 });
+// Download QR Code as SVG
+Route::get('/product/{slug}/download-qr', function ($slug) {
+    $product = Product::findOrFail($slug);
+
+    // $url = url('/product/' . $product->slug);
+   $url = route('single-product', $product->slug);
+    return response()->streamDownload(function () use ($url) {
+        echo QrCode::size(400)->generate($url);
+    }, "QRProduct_{$product->slug}.svg");
+})->name('product.qr.download');
+

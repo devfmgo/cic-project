@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use App\Models\ProductDetail;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use chillerlan\QRCode\QRCode;
+use chillerlan\QRCode\QROptions;
 
 
 class HomeController extends Controller
@@ -18,7 +20,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-
+   
         $products = \App\Models\Product::with([
             'productDetails', // relasi ke detail produk
             'productClick'
@@ -51,6 +53,7 @@ class HomeController extends Controller
         // dd($agent);
         return view('pages.single-product', compact('product', 'productserupa'));
     }
+
     public function product()
     {
         $products = \App\Models\Product::with([

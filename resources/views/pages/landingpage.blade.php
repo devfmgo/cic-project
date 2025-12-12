@@ -216,7 +216,7 @@
 
                             </div>
 
-                            <div class="h-32 px-4 pt-5"
+                            <div class="h-[10rem] px-4 pt-5"
                                 style="overflow:hidden;position:relative;top:-20px;border-radius:25px;background:white;padding:10px;">
 
                                 <div class="flex flex-col h-full justify-between">

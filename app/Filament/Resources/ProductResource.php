@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ProductResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ProductResource\RelationManagers;
-
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 class ProductResource extends Resource
 {
     protected static ?string $model = Product::class;
@@ -77,12 +77,27 @@ class ProductResource extends Resource
                     ->searchable()
                     ->sortable()
                     ->toggleable(),
+                     // QRCODE DI TABEL
+                Tables\Columns\ViewColumn::make('qr')
+                    ->label('QR')
+                    ->view('tables.columns.qr'),
+
+                // TOMBOL DOWNLOAD
+                // Tables\Columns\ViewColumn::make('download_qr')
+                // ->label('Download')
+                // ->view('tables.columns.qr-download'),
+             
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                // Tables\Actions\Action::make('download_qr')
+                // ->label('Download QR')
+                // ->icon('heroicon-o-arrow-down-tray')
+                // ->url(fn ($record) => route('product.qr.download', $record->slug))
+                // ->openUrlInNewTab(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

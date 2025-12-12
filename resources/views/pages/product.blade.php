@@ -89,7 +89,7 @@
                             @endif
                         </div>
 
-                        <div class=" h-36 px-4 pt-4"
+                        <div class="h-[10rem] px-4 pt-5"
                             style="overflow: hidden;position: relative;top: -20px;border-radius: 25px;background: white;padding: 10px; border:1px solid #E5E7EB; ">
                             <div class="flex flex-col h-full justify-between">
                                 <div class="flex justify-between">
