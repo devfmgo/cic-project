@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title', 'Our Product')
+@section('title', 'Produk Kami')
 @section('content')
     <!-- Product All -->
     <section class=" container mx-auto py-20 px-4">
@@ -49,7 +49,7 @@
             @if (empty($q))
                 <div class="py-4">
                     <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
-                        Our <span class="text-purple-600">Product</span>
+                        Produk <span class="text-purple-600">Kami</span>
                     </h2>
                 </div>
             @endif
@@ -140,7 +140,19 @@
                         </div>
                     </div>
                 @endforeach
+                <div
+                    class="relative flex items-center align-center bg-gradient-to-t from-violet-300 to-violet-400 p-5 rounded rounded-xl shadow-lg hover:bg-gradient-to-t hover:from-violet-600 hover:to-violet-700 transition duration-300">
+                    <a href="https://www.combiphar.com/id/produk" target="_blank"
+                        class=" flex flex-col items-center mx-auto p-2 text-gray-50 text-xl tracking-[1px] font-semibold hover:text-purple-300 hover:shadow-md">Produk
+                        Lainnya
+                        <svg data-slot="icon" fill="none" style=width:5rem;" stroke-width="1.5" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                        </svg>
+                    </a>
 
+                </div>
             </div>
         @else
             <div class="my-24">

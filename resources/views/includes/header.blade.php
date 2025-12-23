@@ -53,7 +53,7 @@
                     </path>
                     <path d="M13 13 11 13 11 15 9 15 9 17 11 17 11 19 13 19 13 17 15 17 15 15 13 15 13 13z"></path>
                 </svg>
-                Products</a>
+                Produk</a>
             {{-- <a href="#" class="text-sm font-semibold text-gray-900 hover:text-purple-600">Features</a>
             <a href="#" class="text-sm font-semibold text-gray-900 hover:text-purple-600">Marketplace</a>
             <a href="#" class="text-sm font-semibold text-gray-900 hover:text-purple-600">Company</a> --}}

@@ -72,7 +72,7 @@
                         @if ($product->productDetails && $product->productDetails[0]->url_website)
                             <a href="{{ $product->productDetails[0]->url_website }}" target="_blank"
                                 class="mt-10 inline-block bg-purple-600 text-purple-100 font-medium text-lg py-4 px-10  shadow-lg hover:bg-purple-100 hover:text-purple-600 hover:scale-105 transition duration-300 transform rounded-2xl">
-                                Lihat Website Product
+                                Lihat Website Produk
                             </a>
                         @endif
                     </div>
@@ -107,7 +107,7 @@
                 @php
                     $embedUrl = str_replace('watch?v=', 'embed/', $product->productDetails[0]->url_video);
                     $embedUrl = str_replace('youtu.be/', 'www.youtube.com/embed/', $embedUrl);
-                    $embedUrl .= (str_contains($embedUrl, '?') ? '&' : '?') . 'autoplay=1&mute=0';
+                    $embedUrl .= (str_contains($embedUrl, '?') ? '&' : '?') . 'autoplay=0&mute=0';
                 @endphp
 
                 {{-- ✅ Versi untuk layar besar (di atas header) --}}
@@ -227,7 +227,7 @@
                                 @if ($product->productDetails && $product->productDetails[0]->url_website)
                                     <a href="{{ $product->productDetails[0]->url_website }}" target="_blank"
                                         class=" w-full text-center mt-10 inline-block bg-purple-600 text-purple-100 font-medium text-lg py-4 px-10  shadow-lg hover:bg-purple-100 hover:text-purple-600 hover:scale-105 transition duration-300 transform rounded-2xl">
-                                        Lihat Website Product
+                                        Lihat Website Produk
                                     </a>
                                 @endif
                             </div>

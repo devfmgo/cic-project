@@ -7,6 +7,11 @@
                 <p>&copy; 2025 The Catalyst Combiphar</p>
             </div>
             <div class="flex space-x-4">
+                <a href="https://www.combiphar.com/id" target="_blank" class="hover:text-white transition duration-300"
+                    alt="Combiphar Website">
+                    <img src="{{ asset('assets/images/Logo-Combiphar-BW.png') }}" alt="combiphar"
+                        style="width: 100px; height: auto; margin-top: -11px;">
+                </a>
                 <a href="#" class="hover:text-white transition duration-300">Kebijakan Privasi</a>
                 <a href="#" class="hover:text-white transition duration-300">Syarat & Ketentuan</a>
                 <a href="#" class="hover:text-white transition duration-300">Kontak</a>

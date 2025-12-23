@@ -21,7 +21,7 @@
     </section> --}}
 
 
-    <div id="controls-carousel" class="relative w-full container mx-auto mt-4 lg:mt-24 pb-10" data-carousel="slide">
+    <div id="controls-carousel" class="relative w-full container mx-auto mt-10 lg:mt-24 pb-10" data-carousel="slide">
 
         <!-- Carousel wrapper -->
         <div class="relative h-56 md:h-[43.5rem] overflow-hidden rounded-lg">
@@ -160,7 +160,7 @@
     <section class="lg:mt-10 container mx-auto px-4">
         <div class="py-4">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
-                Our <span class="text-purple-600">Product</span>
+                Produk <span class="text-purple-600">Kami</span>
             </h2>
         </div>
 
@@ -168,7 +168,7 @@
 
             <!-- Button Prev -->
             <button id="btnPrev"
-                class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-purple-500 p-2 rounded-full shadow hover:bg-purple-100 w-10">
+                class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-purple-500 p-2 rounded-full shadow hover:bg-purple-100 w-10 cursor-pointer">
                 <svg data-slot="icon" class="text-gray-50 hover:text-purple-600" fill="none" stroke-width="1.5"
                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"></path>
@@ -256,7 +256,7 @@
 
             <!-- Button Next -->
             <button id="btnNext"
-                class="absolute right-0 top-1/2 -translate-y-1/2 bg-purple-500 p-2  rounded-full shadow hover:bg-purple-100 w-10">
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-purple-500 p-2  rounded-full shadow hover:bg-purple-100 w-10 cursor-pointer">
                 <svg data-slot="icon" class="text-gray-50 hover:text-purple-600" fill="none" stroke-width="1.5"
                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3">
@@ -266,8 +266,9 @@
         </div>
         <div class=" flex justify-center items-center mt-5">
             <a href="/product"
-                class=" bg-purple-600 text-white px-4 py-3 rounded-full shadow-lg cursor-pointer flex justify-center items-center gap-2 hover:bg-purple-700 w-52">View
-                all <svg data-slot="icon" class="w-5 wl-6" fill="none" stroke-width="1.5" stroke="currentColor"
+                class=" bg-purple-600 text-white px-4 py-3 rounded-full shadow-lg cursor-pointer flex justify-center items-center gap-2 hover:bg-purple-700 w-auto">Lihat
+                semua produk
+                <svg data-slot="icon" class="w-5 wl-6" fill="none" stroke-width="1.5" stroke="currentColor"
                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3">
                     </path>

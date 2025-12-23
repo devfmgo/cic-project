@@ -19,7 +19,7 @@
 
  <section class="max-w-6xl mx-auto py-14 px-4 text-center">
      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-         Where to <span class="text-purple-600">Buy</span>
+         Dapatkan<span class="text-purple-600 my-1"> Sekarang</span>
      </h2>
      <p class="text-gray-600 text-md mb-10">
          Dapatkan produk kami di marketplace favorit Anda
@@ -59,7 +59,7 @@
          <a href="https://www.klikindomaret.com/" target="_blank" rel="noopener noreferrer"
              class="group flex flex-col items-center w-28 p-5 bg-red-50 rounded-2xl shadow-md hover:shadow-lg transition hover:scale-105 duration-300">
              <div class="w-16 h-16 flex items-center justify-center rounded-full bg-white mb-3">
-                 <img src="{{ asset('assets/images/ecommerce/indomaret.svg') }}" alt="Indomaret"
+                 <img src="{{ asset('assets/images/ecommerce/Indomaret.svg') }}" alt="Indomaret"
                      class="h-10 object-contain" />
              </div>
              <span class="text-sm font-semibold text-red-600">Indomaret</span>
@@ -67,7 +67,7 @@
          <a href="https://alfagift.id/" target="_blank" rel="noopener noreferrer"
              class="group flex flex-col items-center w-28 p-5 bg-yellow-50 rounded-2xl shadow-md hover:shadow-lg transition hover:scale-105 duration-300">
              <div class="w-16 h-16 flex items-center justify-center rounded-full bg-white mb-3">
-                 <img src="{{ asset('assets/images/ecommerce/logo-alfa.png') }}" alt="Alfamart"
+                 <img src="{{ asset('assets/images/ecommerce/Logo-Alfa.png') }}" alt="Alfamart"
                      class="h-10 object-contain" />
              </div>
              <span class="text-sm font-semibold text-yellow-600">Alfamart</span>
@@ -144,7 +144,7 @@
 
          <div class="max-w-3xl mx-auto mt-5">
              <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">
-                 Form <span class="text-purple-600">Feedback</span>
+                 Hubungi <span class="text-purple-600">Kami</span>
              </h2>
 
              <form action="{{ route('create.feedback') }}" method="POST" class="space-y-5">
@@ -216,7 +216,7 @@
          </div> --}}
      </div>
  </div>
- <div class="fixed bottom-6 right-6 z-[999]">
+ <div class="fixed md:bottom-16 right-6 z-[999]" style="bottom:5rem;">
      <a href="javascript:void(0);" onclick="openModal()"
          class="inline-flex items-center gap-2 text-sm lg:text-md font-mendium text-white hover:text-purple-100 bg-purple-500 p-4 rounded-full hover:bg-purple-600">
          <svg data-slot="icon" class="w-5 lg:w-6" fill="none" stroke-width="1.5" stroke="currentColor"
