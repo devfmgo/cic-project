@@ -227,7 +227,6 @@
              </path>
          </svg>
          Hubungi Kami</a>
-
  </div>
 
  <style>
