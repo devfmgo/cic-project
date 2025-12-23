@@ -34,11 +34,9 @@ class ProductDetailResource extends Resource
                     ->numeric(),
                 Forms\Components\TextInput::make('kemasan')
                     ->label('Kemasan')
-
                     ->maxLength(255),
                 Forms\Components\TextInput::make('nomer_registrasi')
                     ->label('Nomer Registrasi')
-
                     ->maxLength(50),
                 Forms\Components\TextInput::make('url_website')
                     ->label('URL Website')
@@ -50,7 +48,6 @@ class ProductDetailResource extends Resource
                     ->maxLength(255),
                 Forms\Components\TextInput::make('manufaktur')
                     ->label('Manufaktur')
-
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
                     ->label('Product Image')
@@ -61,35 +58,27 @@ class ProductDetailResource extends Resource
                     ->columnSpan('full'),
                 Forms\Components\RichEditor::make('description')
                     ->label('Description')
-
                     ->maxLength(5000),
                 Forms\Components\RichEditor::make('indikasi')
                     ->label('Indikasi')
-
                     ->maxLength(5000),
                 Forms\Components\RichEditor::make('komposisi')
                     ->label('Komposisi')
-
                     ->maxLength(5000),
                 Forms\Components\RichEditor::make('dosis')
                     ->label('Dosis')
-
                     ->maxLength(5000),
                 Forms\Components\RichEditor::make('aturan_pakai')
                     ->label('Aturan Pakai')
-
                     ->maxLength(5000),
                 Forms\Components\RichEditor::make('perhatian')
                     ->label('Perhatian')
-
                     ->maxLength(5000),
                 Forms\Components\RichEditor::make('kontra_indikasi')
                     ->label('Kontra Indikasi')
-
                     ->maxLength(5000),
                 Forms\Components\RichEditor::make('efek_samping')
                     ->label('Efek Samping')
-
                     ->maxLength(5000),
 
             ]);
