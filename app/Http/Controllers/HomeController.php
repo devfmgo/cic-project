@@ -41,6 +41,7 @@ class HomeController extends Controller
         $productserupa = Product::where('product_category_id', $product->product_category_id)
             ->with('productDetails', 'obatCategory')
             ->where('id', '!=', $product->id) // Exclude the current product
+            ->orderBy('product_name')
             ->get();
 
         $agent = new Agent();

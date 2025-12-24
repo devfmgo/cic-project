@@ -46,7 +46,7 @@
     </header>
     <main class="flex-grow mt-10">
         @yield('content')
-        @include('includes.where-to-buy')
+
     </main>
     <footer>
         @include('includes.footer')

@@ -7,7 +7,7 @@
         $detail = $product->productDetails->first(); // aman meski kosong
     @endphp
     @if (!empty($detail))
-        <section class="relative w-full bg-white pt-24 overflow-hidden pb-10">
+        <section class="relative w-full bg-white pt-24 overflow-hidden">
             {{-- ===== BREADCRUMB ===== --}}
             <div class="container mx-auto  mb-6">
                 <ol
@@ -61,7 +61,7 @@
                         <sub class="text-[12px] text-purple-700 tracking-[1.5px] font-semibold">
                             {{ $product->productCategory->product_category_name }}
                         </sub>
-                        <h1 class="text-5xl md:text-6xl font-medium text-gray-700 leading-tight ">
+                        <h1 class="text-3xl md:text-6xl font-medium text-gray-700 leading-tight ">
                             {{ $product->product_name }}
                         </h1>
 
@@ -71,7 +71,7 @@
 
                         @if ($product->productDetails && $product->productDetails[0]->url_website)
                             <a href="{{ $product->productDetails[0]->url_website }}" target="_blank"
-                                class="mt-10 inline-block bg-purple-600 text-purple-100 font-medium text-lg py-4 px-10  shadow-lg hover:bg-purple-100 hover:text-purple-600 hover:scale-105 transition duration-300 transform rounded-2xl">
+                                class="mt-10 inline-block bg-purple-600 text-purple-100 font-medium text-md py-4 px-10  shadow-lg hover:bg-purple-100 hover:text-purple-600 hover:scale-105 transition duration-300 transform rounded-2xl">
                                 Lihat Website Produk
                             </a>
                         @endif
@@ -139,7 +139,7 @@
             @endif
 
             <div
-                class="my-20 {{ $product->productDetails && $product->productDetails[0]->url_video ? 'lg:relative top-[-200px]' : '' }}">
+                class=" {{ $product->productDetails && $product->productDetails[0]->url_video ? 'lg:relative top-[-200px]' : '' }}">
                 <div class="container mx-auto">
                     <div class="bg-white rounded-lg ">
                         <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between">
@@ -232,7 +232,7 @@
                                 @endif
                             </div>
                             {{-- Rekomendasi produk lain  --}}
-                            <div class=" lg:top-20 p-2 my-10 lg:my-0 w-full lg:w-1/3">
+                            <div class="hidden md:block lg:block lg:top-20 p-2 my-10 lg:my-0 w-full lg:w-1/3">
                                 {{-- detail produk --}}
                                 <h4 class="text-md text-gray-700 font-semibold">Produk Sejenis</h4>
 
@@ -288,5 +288,41 @@
             <p class="text-gray-600">Maaf, produk yang Anda cari tidak tersedia.</p>
         </div>
     @endif
+    @include('includes.where-to-buy')
 
+    <div class="lg:hidden top-20 p-2 my-10 lg:my-0 w-full lg:w-1/3">
+        {{-- detail produk --}}
+        <h4 class="text-md text-gray-700 font-semibold">Produk Sejenis</h4>
+
+        <div class="flex flex-col gap-4 mt-4">
+            @foreach ($productserupa as $item)
+                <div class="flex flex-row w-full justify-start transition border border-gray-400 rounded-lg p-1">
+                    <div class="relative transition-shadow duration-300">
+                        <a href="{{ route('single-product', $item->slug) }}">
+                            @if ($item->productDetails && $item->productDetails[0]->image)
+                                <img src="{{ asset('storage/' . $item->productDetails[0]->image) }}"
+                                    alt="{{ $item->product_name }}"
+                                    class="w-full h-20 object-contain mx-auto transition-transform duration-300 hover:scale-110">
+                            @else
+                                <p>Gambar tidak tersedia.</p>
+                            @endif
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-4 tracking-[1px]">
+                        <h3 class="text-gray-500 font-medium text-sm mb-2 hover:text-indigo-800">
+                            <a href="{{ route('single-product', $item->slug) }}">
+                                {{ $item->product_name }}
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            @endforeach
+
+            <a href="/product"
+                class="inline-block mt-4 text-indigo-600 font-medium text-sm py-2 px-6 rounded shadow-lg text-center border border-indigo-600 hover:bg-indigo-600 hover:text-white">
+                Lihat Semua Produk
+            </a>
+        </div>
+    </div>
 @endsection

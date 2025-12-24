@@ -161,4 +161,5 @@
         @endif
 
     </section>
+    @include('includes.where-to-buy')
 @endsection

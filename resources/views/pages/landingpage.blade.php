@@ -275,4 +275,5 @@
                 </svg></a>
         </div>
     </section>
+    @include('includes.where-to-buy')
 @endsection
